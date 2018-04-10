@@ -1,0 +1,24 @@
+{
+  "name": "yui",
+  "version": "0.0.1",
+  "description": "api for yui project",
+  "main": "server.js",
+  "author": "Guilherme Pontes <guilhermepontes@msn.com>",
+  "private": true,
+  "dependencies": {
+    "boom": "^7.2.0",
+    "hapi": "^17.3.1",
+    "mongoose": "^5.0.14"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon server.js --exec babel-node",
+    "prod": "NODE_ENV=prod nodemon  server.js --exec babel"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/node": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "nodemon": "^1.17.3"
+  }
+}
