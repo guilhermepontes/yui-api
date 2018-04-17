@@ -1,5 +1,5 @@
 import Boom from 'boom';
-import Products from './../models/products';
+import Product from './../models/product';
 
 export const plugin = {
   name: 'products',
@@ -9,10 +9,10 @@ export const plugin = {
       path: '/products',
       handler: async () => {
         try {
-          const payload = await Products.find({});
+          const payload = await Product.find({});
           return { payload };
         } catch(e) {
-          return Boom.wrap(e);
+          return Boom.badRequest(e);
         }
       },
     });
@@ -22,11 +22,9 @@ export const plugin = {
       path: '/products',
       handler: async (req, reply) => {
         try {
-          console.log(req);
-          // const payload = Products.create(req.payload);
-          // return { payload }
+          return new Product(req.payload).save();
         } catch(e) {
-          return Boom.wrap(e);
+          return Boom.badRequest(e);
         }
       }
     });

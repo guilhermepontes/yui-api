@@ -21,6 +21,6 @@ const schema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-}, {   timestamps: true });
+}, { timestamps: true });
 
-export default mongoose.model('products', schema);
+export default mongoose.model('product', schema);
