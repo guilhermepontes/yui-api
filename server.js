@@ -6,6 +6,11 @@ import config from './config';
 class Server {
   constructor(service) {
     this.instance = service.server(config.server);
+
+    this.loadMongoose();
+  }
+
+  loadMongoose() {
     mongoose.connect(config.mongodb.uri);
   }
 
@@ -18,10 +23,6 @@ class Server {
     });
 
     return handlers;
-  }
-
-  mongooseConnect() {
-    mongoose.connect(config.mongodb.uri);
   }
 
   async start() {
