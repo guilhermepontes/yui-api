@@ -9,6 +9,11 @@ class Products {
       handler: Products.create,
     },
     {
+      method: 'DELETE',
+      path: '/products/{id}',
+      handler: Products.delete,
+    },
+    {
       method: 'GET',
       path: '/products',
       handler: Products.list,
@@ -24,6 +29,15 @@ class Products {
     try {
       const product = new Product(req.payload);
       return product.save();
+    } catch(e) {
+      return Boom.badRequest(e);
+    }
+  }
+
+  static async delete(req) {
+    try {
+      const product = await Product.findById(req.params.id);
+      return product.remove();
     } catch(e) {
       return Boom.badRequest(e);
     }
