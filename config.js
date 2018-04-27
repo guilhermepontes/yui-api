@@ -8,4 +8,5 @@ const development = {
   }
 };
 
-export default process.env.NODE_ENV === 'dev' ? development : development;
+export default development;
+// export default process.env.NODE_ENV === 'dev' ? development : development;
