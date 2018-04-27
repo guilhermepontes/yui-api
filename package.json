@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev nodemon server.js --exec babel-node",
-    "prod": "NODE_ENV=prod nodemon  server.js --exec babel"
+    "prod": "NODE_ENV=prod nodemon server.js --exec babel-node",
+    "setup": "./scripts/setup"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.44",
