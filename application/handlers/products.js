@@ -64,12 +64,17 @@ class Products {
     }
   }
 
-  static async byId(req) {
+  static async byId(req, reply) {
+    const { id } = req.params;
+
     try {
-      const payload = await Product.findById(req.params.id);
-      return { payload };
+      const payload = await Product.findById(id);
+
+      return payload
+        ? { payload }
+        : reply.response().code(204);
     } catch(e) {
-      return Boom.badRequest('Product {id} not found.');
+      return reply.response().code(204);
     }
   }
 }
