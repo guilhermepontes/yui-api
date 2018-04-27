@@ -10,8 +10,4 @@ cd "$(dirname "$0")/.."
 
 scripts/bootstrap
 
-echo "===> Setting up DB..."
-# reset database to a fresh state.
-mongo ${DB_NAME} --eval "db.dropDatabase();"
-
 echo "==> App is now ready to go!"
