@@ -1,12 +1,17 @@
-export const plugin = {
-  name: 'home',
-  register: async (server, options) => {
-    server.route({
+class Home {
+  static register = [
+    {
       method: 'GET',
       path: '/',
-      handler: () => ({
-        message: 'Welcome to Yui!',
-      }),
-    });
-  },
-};
+      handler: Home.hello,
+    },
+  ]
+
+  static hello() {
+    return {
+      message: 'Welcome to Yui!',
+    }
+  }
+}
+
+export default Home;
