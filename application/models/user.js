@@ -24,6 +24,8 @@ const schema = new mongoose.Schema({
   phone: {
     type: String,
   }
-}, { timestamps: true });
+}, {
+  timestamps: true,
+});
 
 export default mongoose.model('user', schema);

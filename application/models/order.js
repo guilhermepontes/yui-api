@@ -23,6 +23,8 @@ const schema = new mongoose.Schema({
   useUserAddress: {
     type: Boolean,
   },
-}, { timestamps: true });
+}, {
+  timestamps: true,
+});
 
 export default mongoose.model('order', schema);

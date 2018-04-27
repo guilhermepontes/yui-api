@@ -21,7 +21,9 @@ const schema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-}, { timestamps: true });
+}, {
+  timestamps: true,
+});
 
 schema.index({
   name: 'text',

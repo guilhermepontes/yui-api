@@ -21,16 +21,3 @@ class Categories {
 }
 
 export default Categories;
-
-// export const plugin = {
-//   name: 'categories',
-//   register: async (server, options) => {
-//     server.route({
-//       method: 'GET',
-//       path: '/categories',
-//       handler: async () => {
-
-//       },
-//     });
-//   },
-// };

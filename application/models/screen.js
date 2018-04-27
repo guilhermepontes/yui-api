@@ -17,6 +17,8 @@ const schema = new mongoose.Schema({
   components: {
     type: [Component],
   },
-}, { timestamps: true });
+}, {
+  timestamps: true,
+});
 
 export default schema;
