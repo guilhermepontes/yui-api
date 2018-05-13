@@ -1,21 +1,18 @@
 import mongoose from 'mongoose';
 
 const schema = new mongoose.Schema({
-  name: {
+  token: {
     type: String,
     required: true,
   },
-  tabBarName: {
+  userId: {
     type: String,
     required: true,
   },
-  tabBarIcon: {
-    type: String,
+  isAdmin: {
+    type: Boolean,
     required: true,
-  },
-  components: {
-    type: [Component],
-  },
+  }
 }, {
   timestamps: true,
 });

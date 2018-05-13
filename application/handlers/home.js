@@ -4,6 +4,7 @@ class Home {
       method: 'GET',
       path: '/',
       handler: Home.hello,
+      private: true,
     },
   ]
 

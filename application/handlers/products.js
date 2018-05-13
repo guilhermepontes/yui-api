@@ -6,6 +6,7 @@ class Products {
     {
       method: 'POST',
       path: '/products',
+      private: false,
       handler: Products.create,
     },
     {

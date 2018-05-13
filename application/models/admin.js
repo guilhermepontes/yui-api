@@ -1,23 +1,21 @@
 import mongoose from 'mongoose';
 
 const schema = new mongoose.Schema({
-  name: {
+  username: {
     type: String,
     required: true,
   },
-  tabBarName: {
+  email: {
     type: String,
     required: true,
   },
-  tabBarIcon: {
+  password: {
     type: String,
     required: true,
-  },
-  components: {
-    type: [Component],
+    hidden: true,
   },
 }, {
   timestamps: true,
 });
 
-export default schema;
+export default mongoose.model('admin', schema);
